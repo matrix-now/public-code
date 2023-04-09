@@ -13,7 +13,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "io.sinsabridge.flowerbackend.board")
+@MapperScan(basePackages = "io.sinsabridge.flowerbackend.board.mapper")
 public class MyBatisConfig {
 
     @Value("${mybatis.mapper-locations}")

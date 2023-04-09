@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.sinsabridge.flowerbackend.board.mapper.PostMapper">
+    <resultMap id="PostResultMap" type="io.sinsabridge.flowerbackend.board.Post">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="author" property="author"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <select id="findAllPosts" resultMap="PostResultMap">
+        SELECT * FROM post
+    </select>
+
+    <select id="findPostById" parameterType="long" resultMap="PostResultMap">
+        SELECT * FROM post WHERE id = #{id}
+    </select>
+
+    <insert id="insertPost" parameterType="io.sinsabridge.flowerbackend.board.Post">
+        INSERT INTO post (title, content, author, created_at, updated_at)
+        VALUES (#{title}, #{content}, #{author}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <update id="updatePost" parameterType="io.sinsabridge.flowerbackend.board.Post">
+        UPDATE post
+        SET title = #{title}, content = #{content}, author = #{author}, updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deletePostById" parameterType="long">
+        DELETE FROM post WHERE id = #{id}
+    </delete>
+</mapper>

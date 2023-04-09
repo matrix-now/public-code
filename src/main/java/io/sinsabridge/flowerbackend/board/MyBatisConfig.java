@@ -25,10 +25,13 @@ public class MyBatisConfig {
         sessionFactoryBean.setDataSource(dataSource);
 
         // MyBatis config 파일 위치 설정
-        sessionFactoryBean.setConfigLocation(new PathMatchingResourcePatternResolver().getResource("classpath:mybatis-config.xml"));
+        sessionFactoryBean.setConfigLocation(new PathMatchingResourcePatternResolver().getResource("mybatis-config.xml"));
+        sessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
 
         // 매퍼 파일 위치 설정
         Resource[] mapperResources = new PathMatchingResourcePatternResolver().getResources(mapperLocations);
+
+
         sessionFactoryBean.setMapperLocations(mapperResources);
 
         return sessionFactoryBean.getObject();

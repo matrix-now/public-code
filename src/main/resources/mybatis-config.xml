@@ -6,7 +6,7 @@
         <package name="io.sinsabridge.flowerbackend.board.mapper"/>
     </typeAliases>
     <mappers>
-        <mapper resource="mapper/*.xml"/>
+        <mapper resource="mapper/PostMapper.xml"/>
       <!--  <mapper resource="mapper/CommentMapper.xml"/>
         <mapper resource="mapper/UserMapper.xml"/>-->
     </mappers>

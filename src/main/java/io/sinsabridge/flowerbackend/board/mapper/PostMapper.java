@@ -1,6 +1,6 @@
 package io.sinsabridge.flowerbackend.board.mapper;
 
-import io.sinsabridge.flowerbackend.board.Post;
+import io.sinsabridge.flowerbackend.board.dto.Post;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

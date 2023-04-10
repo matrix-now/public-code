@@ -1,4 +1,4 @@
-package io.sinsabridge.flowerbackend.board;
+package io.sinsabridge.flowerbackend.board.dto;
 
 import java.time.LocalDateTime;
 

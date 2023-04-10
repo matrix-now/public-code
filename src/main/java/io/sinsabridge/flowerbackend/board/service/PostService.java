@@ -1,6 +1,6 @@
 package io.sinsabridge.flowerbackend.board.service;
 
-import io.sinsabridge.flowerbackend.board.Post;
+import io.sinsabridge.flowerbackend.board.dto.Post;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package io.sinsabridge.flowerbackend.board.service.impl;
 
-import io.sinsabridge.flowerbackend.board.Post;
+import io.sinsabridge.flowerbackend.board.dto.Post;
 import io.sinsabridge.flowerbackend.board.mapper.PostMapper;
 import io.sinsabridge.flowerbackend.board.service.PostService;
 import org.springframework.stereotype.Service;

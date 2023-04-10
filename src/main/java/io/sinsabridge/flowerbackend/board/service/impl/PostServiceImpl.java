@@ -3,7 +3,6 @@ package io.sinsabridge.flowerbackend.board.service.impl;
 import io.sinsabridge.flowerbackend.board.Post;
 import io.sinsabridge.flowerbackend.board.mapper.PostMapper;
 import io.sinsabridge.flowerbackend.board.service.PostService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
 
-    @Autowired
-    private PostMapper postMapper;
+    private final PostMapper postMapper;
+
+    public PostServiceImpl(PostMapper postMapper) {
+        this.postMapper = postMapper;
+    }
 
     @Override
     public List<Post> findAllPosts() {

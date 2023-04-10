@@ -2,6 +2,16 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <settings>
+        <!-- lazy loading enabled by default -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- set logImpl to STDOUT for troubleshooting -->
+        <setting name="logImpl" value="STDOUT"/>
+        <!-- enable auto mapping of column names to CamelCase property names -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
     <typeAliases>
         <package name="io.sinsabridge.flowerbackend.board.mapper"/>
     </typeAliases>
@@ -10,4 +20,5 @@
       <!--  <mapper resource="mapper/CommentMapper.xml"/>
         <mapper resource="mapper/UserMapper.xml"/>-->
     </mappers>
+
 </configuration>
